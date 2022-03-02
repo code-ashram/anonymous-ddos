@@ -1,0 +1,8 @@
+version: '3.9'
+services:
+  anonymous_ddos:
+    container_name: anonymous-ddos
+    restart: always
+    build: .
+    env_file:
+      - .env

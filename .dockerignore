@@ -1,0 +1,9 @@
+.git
+.gitignore
+
+.idea
+
+/node_modules
+
+README.md
+LICENSE
