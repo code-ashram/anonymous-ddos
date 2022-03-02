@@ -1,10 +1,10 @@
 {
   "name": "anonymousddos",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "russian warship go fuck yourself",
   "main": "main.js",
   "scripts": {
-    "start": "NODE_ENV=production node main.js"
+    "start": "node main.js"
   },
   "keywords": [
     "stopwar"
@@ -14,7 +14,8 @@
   "type": "module",
   "dependencies": {
     "cloudscraper": "^4.6.0",
-    "randomstring": "^1.2.2"
+    "randomstring": "^1.2.2",
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "dotenv": "^16.0.0"
