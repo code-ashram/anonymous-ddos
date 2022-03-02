@@ -9,9 +9,14 @@ const generateString = () => randomstring.generate({
 
 const generateIP = () => `${generateByte()}.${generateByte()}.${generateByte()}.${generateByte()}`
 
-export const success = (url, delay) => {
-  console.log('\x1b[34m%s\x1b[0m', `DDOS [ url: ${url} delay: ${delay / 1000}sec ]`)
-  console.log('\x1b[33m%s\x1b[0m', `has been started successfully`)
+export const success = (url, speed, time) => {
+  console.log(
+    '\x1b[34m%s\x1b[0m',
+    `url: ${url}
+attacks per second: ${Math.round(1000 / speed) || 'unlimited'}
+finish the process in: ${time + 'min'}
+DDoS has been started successfully`
+  )
 }
 
 export const printStatus = (statusCode) => {
@@ -19,7 +24,7 @@ export const printStatus = (statusCode) => {
   ? console.log('\x1b[32m%s\x1b[0m', 'attack')
   : statusCode < 500
     ? console.log('\x1b[33m%s\x1b[0m', 'the server responded with an error')
-    : console.log('\x1b[35m%s\x1b[0m', 'the server is not responding')
+    : console.log('\x1b[33m%s\x1b[0m', 'the server is not responding')
 }
 
 export const generateOptions = (url, useragent, cookie) => {
