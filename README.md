@@ -19,6 +19,7 @@ ___
 1. as local Node/npm environment
    - Installation
      - Install [Node.JS](https://nodejs.org/)
+     - open commandline in the project directory
      - run command `npm ci`
    - Start
      - open commandline in the project directory
